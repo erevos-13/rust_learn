@@ -1,0 +1,1 @@
+window.ALL_CRATES = ["learn_complete_beginners_guide"];
