@@ -1,1 +1,1 @@
-window.ALL_CRATES = ["learn_complete_beginners_guide"];
+window.ALL_CRATES = ["cfg_if","getrandom","learn_complete_beginners_guide","libc","ppv_lite86","rand","rand_chacha","rand_core"];

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":[["playNmae",""],["playingAUdio",""]],"mod":[["clean","Module create #Create a fn with pub we can use it every were imported. Second use of the mod inside mod."]]};

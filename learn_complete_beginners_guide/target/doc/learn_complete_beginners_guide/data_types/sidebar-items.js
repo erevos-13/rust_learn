@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":[["arrays_fn","Arrays"],["data_typesFn","Data Types #Data types"],["slices_fn","Slices"],["structures_fn","Structures"],["tuples_fn","Tuples"],["update_colors","Update Slice"],["vector_fn","Vectors"]],"struct":[["Employee",""]]};
