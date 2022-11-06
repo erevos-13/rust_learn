@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":[["get_string",""],["lifetime_fn","Lifetime"]],"struct":[["Dog",""],["Person","Lifetime"]]};

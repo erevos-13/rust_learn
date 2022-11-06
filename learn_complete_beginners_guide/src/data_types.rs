@@ -14,6 +14,8 @@ pub fn data_typesFn() {
     slices_fn();
     tuples_fn();
     structures_fn();
+    enums_fn();
+    generics_fn();
 }
 
 fn arrays_fn() {
@@ -229,4 +231,83 @@ fn structures_fn() {
     println!("Struct : {}, {}, {}", emp1.age, emp1.company, emp1.name);
     println!("Struct fn: {}", emp1.fn_detail());
     println!("Struct static fn: {}", Employee::static_n_detail());
+}
+
+///Enum
+#[derive(Debug)]
+enum Colors {
+    Red,
+    Greed,
+    Blue,
+}
+/// Enum Add values
+#[derive(Debug)]
+enum Person {
+    Name(String),
+    Surname(String),
+    Age(u32),
+}
+///Enum Usage
+fn enums_fn() {
+    let my_color = Colors::Blue;
+    println!("Colors enums {:?}", my_color);
+    let person = Person::Name(String::from("Orfeas"));
+    println!("Person enum : {:?}", person);
+}
+#[derive(Debug)]
+struct Point<T> {
+    x: T,
+    y: T,
+}
+#[derive(Debug)]
+enum Colors_with_gen<T> {
+    Red(T),
+    Blue(T),
+    Green(T),
+}
+///Generics
+fn generics_fn() {
+    //!# Generics
+    //! Allows us to have a variable data types
+    //!```
+    //! struct Point<T> {
+    //!     x: T,
+    //!     y: T
+    //! }
+    //! ```
+    //!
+    //! Usage
+    //! `let p1: Point<i32> = Point {x:6, y: 8};`
+    //! `let p2: Point<f64> = Point {x:3.25, y:8.43}`
+    //!
+    //! ## In Enums
+    //! ```
+    //! enum Colors<T> {
+    //!     Red(T),
+    //!     Blue(T),
+    //!     Green(T)
+    //! }
+    //! ```
+    //! usage:
+    //!
+    //! `let color1 = Colors_with_gen::Blue("blue");`
+    //!
+    //! `let color2 = Colors_with_gen::Red(255);`
+    //! ## Multi Generics
+    //!```
+    //! struct Point<T, V> {
+    //!     x: T,
+    //!     y: V
+    //! }
+    //! ```
+    //!
+    //! usage:
+    //! `let p2: Point<i32, f32> = Point { x: 6, y: 8.44 };`
+
+    let p1: Point<i32> = Point { x: 6, y: 8 };
+    let p2: Point<f64> = Point { x: 3.25, y: 8.43 };
+    println!("P1: {:?}, P2: {:?}", p1.x, p2.x);
+    let color1 = Colors_with_gen::Blue("blue");
+    let color2 = Colors_with_gen::Red(255);
+    println!("Color with enum {:?}, red: {:?}", color1, color2)
 }

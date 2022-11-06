@@ -230,6 +230,87 @@
 <span id="230">230</span>
 <span id="231">231</span>
 <span id="232">232</span>
+<span id="233">233</span>
+<span id="234">234</span>
+<span id="235">235</span>
+<span id="236">236</span>
+<span id="237">237</span>
+<span id="238">238</span>
+<span id="239">239</span>
+<span id="240">240</span>
+<span id="241">241</span>
+<span id="242">242</span>
+<span id="243">243</span>
+<span id="244">244</span>
+<span id="245">245</span>
+<span id="246">246</span>
+<span id="247">247</span>
+<span id="248">248</span>
+<span id="249">249</span>
+<span id="250">250</span>
+<span id="251">251</span>
+<span id="252">252</span>
+<span id="253">253</span>
+<span id="254">254</span>
+<span id="255">255</span>
+<span id="256">256</span>
+<span id="257">257</span>
+<span id="258">258</span>
+<span id="259">259</span>
+<span id="260">260</span>
+<span id="261">261</span>
+<span id="262">262</span>
+<span id="263">263</span>
+<span id="264">264</span>
+<span id="265">265</span>
+<span id="266">266</span>
+<span id="267">267</span>
+<span id="268">268</span>
+<span id="269">269</span>
+<span id="270">270</span>
+<span id="271">271</span>
+<span id="272">272</span>
+<span id="273">273</span>
+<span id="274">274</span>
+<span id="275">275</span>
+<span id="276">276</span>
+<span id="277">277</span>
+<span id="278">278</span>
+<span id="279">279</span>
+<span id="280">280</span>
+<span id="281">281</span>
+<span id="282">282</span>
+<span id="283">283</span>
+<span id="284">284</span>
+<span id="285">285</span>
+<span id="286">286</span>
+<span id="287">287</span>
+<span id="288">288</span>
+<span id="289">289</span>
+<span id="290">290</span>
+<span id="291">291</span>
+<span id="292">292</span>
+<span id="293">293</span>
+<span id="294">294</span>
+<span id="295">295</span>
+<span id="296">296</span>
+<span id="297">297</span>
+<span id="298">298</span>
+<span id="299">299</span>
+<span id="300">300</span>
+<span id="301">301</span>
+<span id="302">302</span>
+<span id="303">303</span>
+<span id="304">304</span>
+<span id="305">305</span>
+<span id="306">306</span>
+<span id="307">307</span>
+<span id="308">308</span>
+<span id="309">309</span>
+<span id="310">310</span>
+<span id="311">311</span>
+<span id="312">312</span>
+<span id="313">313</span>
 </pre><pre class="rust"><code><span class="doccomment">///Data Types</span>
 <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">data_typesFn</span>() {
     <span class="doccomment">//! #Data types</span>
@@ -246,6 +327,8 @@
     <span class="ident">slices_fn</span>();
     <span class="ident">tuples_fn</span>();
     <span class="ident">structures_fn</span>();
+    <span class="ident">enums_fn</span>();
+    <span class="ident">generics_fn</span>();
 }
 
 <span class="kw">fn</span> <span class="ident">arrays_fn</span>() {
@@ -461,6 +544,85 @@
     <span class="macro">println!</span>(<span class="string">&quot;Struct : {}, {}, {}&quot;</span>, <span class="ident">emp1</span>.<span class="ident">age</span>, <span class="ident">emp1</span>.<span class="ident">company</span>, <span class="ident">emp1</span>.<span class="ident">name</span>);
     <span class="macro">println!</span>(<span class="string">&quot;Struct fn: {}&quot;</span>, <span class="ident">emp1</span>.<span class="ident">fn_detail</span>());
     <span class="macro">println!</span>(<span class="string">&quot;Struct static fn: {}&quot;</span>, <span class="ident">Employee::static_n_detail</span>());
+}
+
+<span class="doccomment">///Enum</span>
+<span class="attribute">#[<span class="ident">derive</span>(<span class="ident">Debug</span>)]</span>
+<span class="kw">enum</span> <span class="ident">Colors</span> {
+    <span class="ident">Red</span>,
+    <span class="ident">Greed</span>,
+    <span class="ident">Blue</span>,
+}
+<span class="doccomment">/// Enum Add values</span>
+<span class="attribute">#[<span class="ident">derive</span>(<span class="ident">Debug</span>)]</span>
+<span class="kw">enum</span> <span class="ident">Person</span> {
+    <span class="ident">Name</span>(<span class="ident">String</span>),
+    <span class="ident">Surname</span>(<span class="ident">String</span>),
+    <span class="ident">Age</span>(<span class="ident">u32</span>),
+}
+<span class="doccomment">///Enum Usage</span>
+<span class="kw">fn</span> <span class="ident">enums_fn</span>() {
+    <span class="kw">let</span> <span class="ident">my_color</span> <span class="op">=</span> <span class="ident">Colors::Blue</span>;
+    <span class="macro">println!</span>(<span class="string">&quot;Colors enums {:?}&quot;</span>, <span class="ident">my_color</span>);
+    <span class="kw">let</span> <span class="ident">person</span> <span class="op">=</span> <span class="ident">Person::Name</span>(<span class="ident">String::from</span>(<span class="string">&quot;Orfeas&quot;</span>));
+    <span class="macro">println!</span>(<span class="string">&quot;Person enum : {:?}&quot;</span>, <span class="ident">person</span>);
+}
+<span class="attribute">#[<span class="ident">derive</span>(<span class="ident">Debug</span>)]</span>
+<span class="kw">struct</span> <span class="ident">Point</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
+    <span class="ident">x</span>: <span class="ident">T</span>,
+    <span class="ident">y</span>: <span class="ident">T</span>,
+}
+<span class="attribute">#[<span class="ident">derive</span>(<span class="ident">Debug</span>)]</span>
+<span class="kw">enum</span> <span class="ident">Colors_with_gen</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
+    <span class="ident">Red</span>(<span class="ident">T</span>),
+    <span class="ident">Blue</span>(<span class="ident">T</span>),
+    <span class="ident">Green</span>(<span class="ident">T</span>),
+}
+<span class="doccomment">///Generics</span>
+<span class="kw">fn</span> <span class="ident">generics_fn</span>() {
+    <span class="doccomment">//!# Generics</span>
+    <span class="doccomment">//! Allows us to have a variable data types</span>
+    <span class="doccomment">//!```</span>
+    <span class="doccomment">//! struct Point&lt;T&gt; {</span>
+    <span class="doccomment">//!     x: T,</span>
+    <span class="doccomment">//!     y: T</span>
+    <span class="doccomment">//! }</span>
+    <span class="doccomment">//! ```</span>
+    <span class="doccomment">//!</span>
+    <span class="doccomment">//! Usage</span>
+    <span class="doccomment">//! `let p1: Point&lt;i32&gt; = Point {x:6, y: 8};`</span>
+    <span class="doccomment">//! `let p2: Point&lt;f64&gt; = Point {x:3.25, y:8.43}`</span>
+    <span class="doccomment">//!</span>
+    <span class="doccomment">//! ## In Enums</span>
+    <span class="doccomment">//! ```</span>
+    <span class="doccomment">//! enum Colors&lt;T&gt; {</span>
+    <span class="doccomment">//!     Red(T),</span>
+    <span class="doccomment">//!     Blue(T),</span>
+    <span class="doccomment">//!     Green(T)</span>
+    <span class="doccomment">//! }</span>
+    <span class="doccomment">//! ```</span>
+    <span class="doccomment">//! usage:</span>
+    <span class="doccomment">//!</span>
+    <span class="doccomment">//! `let color1 = Colors_with_gen::Blue(&quot;blue&quot;);`</span>
+    <span class="doccomment">//!</span>
+    <span class="doccomment">//! `let color2 = Colors_with_gen::Red(255);`</span>
+    <span class="doccomment">//! ## Multi Generics</span>
+    <span class="doccomment">//!```</span>
+    <span class="doccomment">//! struct Point&lt;T, V&gt; {</span>
+    <span class="doccomment">//!     x: T,</span>
+    <span class="doccomment">//!     y: V</span>
+    <span class="doccomment">//! }</span>
+    <span class="doccomment">//! ```</span>
+    <span class="doccomment">//!</span>
+    <span class="doccomment">//! usage:</span>
+    <span class="doccomment">//! `let p2: Point&lt;i32, f32&gt; = Point { x: 6, y: 8.44 };`</span>
+
+    <span class="kw">let</span> <span class="ident">p1</span>: <span class="ident">Point</span><span class="op">&lt;</span><span class="ident">i32</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Point</span> { <span class="ident">x</span>: <span class="number">6</span>, <span class="ident">y</span>: <span class="number">8</span> };
+    <span class="kw">let</span> <span class="ident">p2</span>: <span class="ident">Point</span><span class="op">&lt;</span><span class="ident">f64</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Point</span> { <span class="ident">x</span>: <span class="number">3.25</span>, <span class="ident">y</span>: <span class="number">8.43</span> };
+    <span class="macro">println!</span>(<span class="string">&quot;P1: {:?}, P2: {:?}&quot;</span>, <span class="ident">p1</span>.<span class="ident">x</span>, <span class="ident">p2</span>.<span class="ident">x</span>);
+    <span class="kw">let</span> <span class="ident">color1</span> <span class="op">=</span> <span class="ident">Colors_with_gen::Blue</span>(<span class="string">&quot;blue&quot;</span>);
+    <span class="kw">let</span> <span class="ident">color2</span> <span class="op">=</span> <span class="ident">Colors_with_gen::Red</span>(<span class="number">255</span>);
+    <span class="macro">println!</span>(<span class="string">&quot;Color with enum {:?}, red: {:?}&quot;</span>, <span class="ident">color1</span>, <span class="ident">color2</span>)
 }
 </code></pre></div>
 </section></div></main><div id="rustdoc-vars" data-root-path="../../" data-current-crate="learn_complete_beginners_guide" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.64.0 (a55dd71d5 2022-09-19)" ></div></body></html>

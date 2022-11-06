@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":[["Suit",""]],"fn":[["control_structure","Control Structures"],["country","Match return values"],["for_loop","For Loop"],["get_cubes",""],["get_oranges",""],["get_squares",""],["if_statement","if statement"],["match_statement","Match"],["pattern_matching","Pattern matching"],["print_choice","Match with enums"],["while_loop","While loop"]]};

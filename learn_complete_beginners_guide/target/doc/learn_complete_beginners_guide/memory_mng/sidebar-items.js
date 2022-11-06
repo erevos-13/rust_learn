@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":[["borrowing",""],["lifetimes",""],["onwnership",""],["refernce_counted_variables",""]]};

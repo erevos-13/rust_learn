@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":[["duplicate",""],["dynamic_dispatch","Dynamic dispatch"]],"trait":[["Duplicateble","Dynamic dispatch"]]};

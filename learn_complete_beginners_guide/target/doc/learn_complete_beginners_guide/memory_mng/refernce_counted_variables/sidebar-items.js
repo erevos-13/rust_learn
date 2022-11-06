@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":[["reference_counted_variables","Rc Variables"]],"struct":[["Car",""]]};

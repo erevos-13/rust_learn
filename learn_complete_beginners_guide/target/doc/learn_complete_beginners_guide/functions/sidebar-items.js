@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"fn":[["functionFn","Functions"],["loop_say_hi",""],["say_hello",""],["say_hello_by_ref",""],["say_hello_greeting",""],["say_hi","Function."]]};
+window.SIDEBAR_ITEMS = {"fn":[["apply",""],["closures_fn","Closures"],["functionFn","Functions"],["functions_and_cope","Function and Scope"],["higher_order_function","HOFs"],["is_even",""],["loop_say_hi",""],["macros_fn","Macros"],["say_hello",""],["say_hello_by_ref",""],["say_hello_greeting",""],["say_hi","Function."]],"static":[["R",""]]};
