@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":[["helper_methods","Helper methods"]]};

@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"mod":[["errors",""],["working_with_files",""]]};
+window.SIDEBAR_ITEMS = {"mod":[["errors",""],["helper_methos",""],["question_operator",""],["working_with_files",""]]};

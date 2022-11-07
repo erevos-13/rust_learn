@@ -1,6 +1,7 @@
 use crate::crates::arch::arch_files as arch;
 
 mod comments;
+mod conscurrency;
 mod constant;
 mod control_structures;
 mod crates;
@@ -39,5 +40,8 @@ fn main() {
     // error_handling::working_with_files::working_with_files();
     // error_handling::errors::errors_fn();
     // error_handling::helper_methos::helper_methods();
-    error_handling::question_operator::question_operator();
+    // error_handling::question_operator::question_operator();
+    // conscurrency::trheads::threads_fn();
+    // conscurrency::channels::channels_fn()
+    conscurrency::mutex::mutex_fn();
 }
